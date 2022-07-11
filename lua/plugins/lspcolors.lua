@@ -1,0 +1,4 @@
+
+require("lsp-colors").setup({
+
+})
