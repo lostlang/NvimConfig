@@ -22,6 +22,11 @@ Plug "akinsho/bufferline.nvim"
 Plug 'kyazdani42/nvim-tree.lua'
 -- Тег бар
 Plug 'preservim/tagbar'
+-- Телескоп
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+-- fzf
+Plug 'nvim-telescope/telescope-fzf-native.nvim'
 
 -- LSP
 Plug "williamboman/nvim-lsp-installer"

@@ -12,6 +12,7 @@ require 'plugins.lspconfig'
 require 'plugins.luasnip'
 require 'plugins.comment'
 require 'plugins.indentblackline'
+require 'plugins.telescope'
 
 require 'mapping.base'
 require 'mapping.bufferline'
@@ -19,4 +20,5 @@ require 'mapping.delete_arrow'
 require 'mapping.nvimtree'
 require 'mapping.luasnip'
 require 'mapping.tagbar'
+require 'mapping.telescope'
 
