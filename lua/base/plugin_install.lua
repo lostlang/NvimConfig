@@ -36,6 +36,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 
+-- Copilot
+Plug "github/copilot.vim"
+
 -- Линтер для Go
 Plug 'fatih/vim-go'
 
