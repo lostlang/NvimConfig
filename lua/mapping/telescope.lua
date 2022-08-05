@@ -1,7 +1,4 @@
 
-local map = vim.api.nvim_set_keymap
-local default_opt = {noremap = true, silent = true}
-
-map('n', 'ff', '<cmd>Telescope find_files<cr>', default_opt)
-map('n', 'fg', '<cmd>Telescope live_grep<cr>', default_opt)
+Map('n', 'ff', '<cmd>Telescope find_files<cr>', Default_opt)
+Map('n', 'fg', '<cmd>Telescope live_grep<cr>', Default_opt)
 
