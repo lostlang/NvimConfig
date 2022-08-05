@@ -2,6 +2,7 @@
 require 'base.plugin_install'
 require 'base.config'
 require 'base.themes'
+require 'base.mapping'
 --
 require 'plugins.bufferline'
 require 'plugins.lualine'
@@ -13,6 +14,7 @@ require 'plugins.luasnip'
 require 'plugins.comment'
 require 'plugins.indentblackline'
 require 'plugins.telescope'
+require 'plugins.toggleterm'
 
 require 'mapping.base'
 require 'mapping.bufferline'

@@ -39,6 +39,9 @@ Plug 'saadparwaiz1/cmp_luasnip'
 -- Copilot
 Plug "github/copilot.vim"
 
+-- Terminal
+Plug 'akinsho/toggleterm.nvim'
+
 -- Линтер для Go
 Plug 'fatih/vim-go'
 
