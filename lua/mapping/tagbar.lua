@@ -1,3 +1,3 @@
 
-Map('n', '<C-n>', ':TagbarToggle<CR>', Default_opt)
+Map('n', '<C-x>', ':TagbarToggle<CR>', Default_opt)
 
