@@ -19,7 +19,8 @@ Plug 'nvim-lualine/lualine.nvim'
 -- Строка влкадок
 Plug "akinsho/bufferline.nvim"
 -- Дерево файлов
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-neo-tree/neo-tree.nvim'
+Plug 'MunifTanjim/nui.nvim'
 -- Тег бар
 Plug 'preservim/tagbar'
 -- Телескоп
