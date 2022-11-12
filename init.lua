@@ -1,26 +1,25 @@
 
-require 'base.plugin_install'
-require 'base.config'
-require 'base.themes'
-require 'base.mapping'
---
-require 'plugins.bufferline'
-require 'plugins.lualine'
-require 'plugins.neotree'
-require 'plugins.treesitter'
-require 'plugins.lspinstaller'
-require 'plugins.lspconfig'
-require 'plugins.luasnip'
-require 'plugins.comment'
-require 'plugins.indentblackline'
-require 'plugins.telescope'
-require 'plugins.toggleterm'
+require "base.plugin_install"
+require "base.config"
+require "base.themes"
+require "base.mapping"
 
-require 'mapping.base'
-require 'mapping.bufferline'
-require 'mapping.delete_arrow'
-require 'mapping.neotree'
-require 'mapping.luasnip'
-require 'mapping.tagbar'
-require 'mapping.telescope'
+require "plugins.bufferline"
+require "plugins.lualine"
+require "plugins.neotree"
+require "plugins.treesitter"
+require "plugins.lspinstaller"
+require "plugins.lspconfig"
+require "plugins.luasnip"
+require "plugins.comment"
+require "plugins.indentblackline"
+require "plugins.telescope"
+require "plugins.toggleterm"
+
+require "mapping.base"
+require "mapping.bufferline"
+require "mapping.neotree"
+require "mapping.luasnip"
+require "mapping.tagbar"
+require "mapping.telescope"
 
