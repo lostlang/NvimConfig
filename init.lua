@@ -36,3 +36,6 @@ require "mapping.telescope"
 
 require "plugins.toggleterm"
 
+require "plugins.diffview"
+require "mapping.diffview"
+

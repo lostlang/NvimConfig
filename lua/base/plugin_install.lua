@@ -27,13 +27,16 @@ Plug "akinsho/bufferline.nvim"
 -- Дерево файлов
 Plug "nvim-neo-tree/neo-tree.nvim"
 Plug "MunifTanjim/nui.nvim"
--- Тег бар
+-- Дерево файлов
 Plug "preservim/tagbar"
--- Телескоп
-Plug "nvim-lua/plenary.nvim"
+-- Git разница
+Plug 'sindrets/diffview.nvim'
+-- Поиско по файлам
 Plug "nvim-telescope/telescope.nvim"
--- fzf
+-- fzf для telescope
 Plug "nvim-telescope/telescope-fzf-native.nvim"
+-- Библиотека для работы telescope и diffview
+Plug "nvim-lua/plenary.nvim"
 
 -- LSP
 Plug "williamboman/nvim-lsp-installer"

@@ -1,2 +1,3 @@
 
 require "lsp-colors".setup {}
+
