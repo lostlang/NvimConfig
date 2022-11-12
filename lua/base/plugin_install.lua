@@ -43,9 +43,6 @@ Plug "github/copilot.vim"
 -- Terminal
 Plug "akinsho/toggleterm.nvim"
 
--- Линтеры
-Plug "jose-elias-alvarez/null-ls.nvim"
-
 -- Линтер для Go
 Plug "fatih/vim-go"
 

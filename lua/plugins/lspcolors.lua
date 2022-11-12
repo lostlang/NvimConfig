@@ -1,2 +1,2 @@
 
-require("lsp-colors").setup {}
+require "lsp-colors".setup {}

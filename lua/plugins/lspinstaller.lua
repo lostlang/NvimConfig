@@ -1,5 +1,5 @@
 
-require("nvim-lsp-installer").setup {
+require "nvim-lsp-installer".setup {
 	ensure_installed = LSP_SERVERS,
 	automatic_installation = true,
 	ui = {
