@@ -1,5 +1,5 @@
 
-local nvim_lsp = require("lspconfig")
+local nvim_lsp = require "lspconfig"
 
 for _, lsp in ipairs(LSP_SERVERS) do
 	nvim_lsp[lsp].setup {

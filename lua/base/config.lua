@@ -16,11 +16,11 @@ opt.smartindent = true
 opt.scrolloff = 10
 
 -- тестовые символы ·•●
-opt.listchars:append({ space = "•" })
-opt.listchars:append({ tab = ">-" })
-opt.listchars:append({ eol = "↵" })
+opt.listchars:append({space = "•"})
+opt.listchars:append({tab = ">-"})
+opt.listchars:append({eol = "↵"})
 opt.list = true
 
-LSP_SERVERS = { "sumneko_lua", "gopls", "pyright" }
-LANG_SUPPORT = { "lua", "go", "python" }
+LSP_SERVERS = {"sumneko_lua", "gopls", "pyright", "rust_analyzer", "elixirls"}
+LANG_SUPPORT = {"lua", "go", "python", "rust", "elixir"}
 
