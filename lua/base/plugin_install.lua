@@ -7,10 +7,16 @@ vim.call("plug#begin", "~/.config/nvim/plugged")
 Plug "tiagovla/tokyodark.nvim"
 -- Иконки
 Plug "kyazdani42/nvim-web-devicons"
--- Улучшение хайлайта
+
+-- Улучшение подсветки
 Plug "nvim-treesitter/nvim-treesitter"
 -- Подсветка отступов
 Plug "lukas-reineke/indent-blankline.nvim"
+-- Подсветка скобок
+Plug "p00f/nvim-ts-rainbow"
+-- Подсветка цветов
+Plug "norcalli/nvim-colorizer.lua"
+
 -- Простое коментирование
 Plug "numToStr/Comment.nvim"
 

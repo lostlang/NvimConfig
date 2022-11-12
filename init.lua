@@ -1,25 +1,38 @@
 
 require "base.plugin_install"
 require "base.config"
-require "base.themes"
 require "base.mapping"
+require "base.themes"
 
+require "mapping.base"
+
+-- Разные плашечки
 require "plugins.bufferline"
-require "plugins.lualine"
+require "mapping.bufferline"
+
 require "plugins.neotree"
+require "mapping.neotree"
+
+require "mapping.tagbar"
+
+require "plugins.lualine"
+
+-- Разукрашивание
 require "plugins.treesitter"
+require "plugins.nvimcolorizer"
+require "plugins.indentblackline"
+
+-- LSP
 require "plugins.lspinstaller"
 require "plugins.lspconfig"
 require "plugins.luasnip"
-require "plugins.comment"
-require "plugins.indentblackline"
-require "plugins.telescope"
-require "plugins.toggleterm"
-
-require "mapping.base"
-require "mapping.bufferline"
-require "mapping.neotree"
 require "mapping.luasnip"
-require "mapping.tagbar"
+
+-- Приятные мелочи
+require "plugins.comment"
+
+require "plugins.telescope"
 require "mapping.telescope"
+
+require "plugins.toggleterm"
 

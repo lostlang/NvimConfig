@@ -9,8 +9,10 @@ Map("v", "kj", "<esc>", Default_opt)
 Map("n", "<F3>", ":source %<CR>", Default_opt)
 Map("n", "<F4>", ":PlugInstall<CR>", Default_opt)
 
--- Стандартные комбинации клавиш в вим
+-- Выделить весь текст
 Map("n", "<C-a>", "ggVG", Default_opt)
+
+-- Сохранить
 Map("n", "<C-s>", ":w<CR>", Default_opt)
 
 -- Снятие выделения двойным пробелом
