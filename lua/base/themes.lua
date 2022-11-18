@@ -20,7 +20,7 @@ local colors = {
 	blue         = "#25B2BC",
 	yellow       = "#F09383",
 	gray         = "#E95678",
-	darkgray     = "#0f1117",
+	darkgray     = "#11121D",
 	lightgray    = "#161821",
 	inactivegray = "#3e445e",
 }
