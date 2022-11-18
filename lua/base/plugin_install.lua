@@ -25,8 +25,7 @@ Plug "nvim-lualine/lualine.nvim"
 -- Строка влкадок
 Plug "akinsho/bufferline.nvim"
 -- Дерево файлов
-Plug "nvim-neo-tree/neo-tree.nvim"
-Plug "MunifTanjim/nui.nvim"
+Plug 'nvim-tree/nvim-tree.lua'
 -- Дерево файлов
 Plug "preservim/tagbar"
 -- Git разница

@@ -10,8 +10,8 @@ require "mapping.base"
 require "plugins.bufferline"
 require "mapping.bufferline"
 
-require "plugins.neotree"
-require "mapping.neotree"
+require "plugins.nvimtree"
+require "mapping.nvimtree"
 
 require "mapping.tagbar"
 
