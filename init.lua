@@ -39,3 +39,6 @@ require "plugins.toggleterm"
 require "plugins.diffview"
 require "mapping.diffview"
 
+-- Rust
+require "plugins.rust"
+

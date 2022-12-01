@@ -54,5 +54,8 @@ Plug "akinsho/toggleterm.nvim"
 -- Линтер для Go
 Plug "fatih/vim-go"
 
+-- Линтер для Rust
+Plug "rust-lang/rust.vim"
+
 vim.call("plug#end")
 
