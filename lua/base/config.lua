@@ -21,6 +21,6 @@ opt.listchars:append({tab = ">-"})
 opt.listchars:append({eol = "↵"})
 opt.list = true
 
-LSP_SERVERS = {"sumneko_lua", "gopls", "pyright", "rust_analyzer", "elixirls"}
+LSP_SERVERS = {"lua_ls", "gopls", "pyright", "rust_analyzer", "elixirls"}
 LANG_SUPPORT = {"lua", "go", "python", "rust", "elixir"}
 
