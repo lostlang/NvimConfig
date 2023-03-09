@@ -1,1 +1,3 @@
-vim.g.rustfmt_autosave = 1
+
+Vim.g.rustfmt_autosave = 1
+

@@ -1,26 +1,31 @@
 
-local opt = vim.opt
+Vim = vim
+Opt = Vim.opt
+Cmd = Vim.cmd
 
-opt.mouse = "a"
-opt.clipboard = "unnamedplus"
+Opt.mouse = "a"
+Opt.clipboard = "unnamedplus"
 
-opt.colorcolumn = "100"
+Opt.colorcolumn = "100"
 
-opt.number = true
-opt.relativenumber = true
+Opt.number = true
+Opt.relativenumber = true
 
-opt.encoding = "utf-8"
+Opt.encoding = "utf-8"
 
-opt.smartindent = true
+Opt.smartindent = true
 
-opt.scrolloff = 10
+Opt.scrolloff = 10
 
 -- тестовые символы ·•●
-opt.listchars:append({space = "•"})
-opt.listchars:append({tab = ">-"})
-opt.listchars:append({eol = "↵"})
-opt.list = true
+Opt.listchars:append({space = "•"})
+Opt.listchars:append({tab = ">-"})
+Opt.listchars:append({eol = "↵"})
+Opt.list = true
 
-LSP_SERVERS = {"lua_ls", "gopls", "pyright", "rust_analyzer", "elixirls"}
-LANG_SUPPORT = {"lua", "go", "python", "rust", "elixir"}
+LSP_SERVERS = {"gopls", "pyright", "rust_analyzer", "lua_ls", "elixirls"}
+LANG_SUPPORT = {"go", "python", "rust", "lua", "elixir"}
+
+Map  = Vim.api.nvim_set_keymap
+Default_opt = {noremap = true, silent = true}
 

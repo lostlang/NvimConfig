@@ -26,10 +26,10 @@ Plug "nvim-lualine/lualine.nvim"
 Plug "akinsho/bufferline.nvim"
 -- Дерево файлов
 Plug "nvim-tree/nvim-tree.lua"
--- Дерево файлов
+-- Дерево файла
 Plug "preservim/tagbar"
 -- Git разница
-Plug 'sindrets/diffview.nvim'
+Plug "sindrets/diffview.nvim"
 -- Поиско по файлам
 Plug "nvim-telescope/telescope.nvim"
 -- fzf для telescope
@@ -38,7 +38,8 @@ Plug "nvim-telescope/telescope-fzf-native.nvim"
 Plug "nvim-lua/plenary.nvim"
 
 -- LSP
-Plug "williamboman/nvim-lsp-installer"
+Plug "williamboman/mason.nvim"
+Plug "williamboman/mason-lspconfig.nvim"
 Plug "neovim/nvim-lspconfig"
 Plug "L3MON4D3/LuaSnip"
 Plug "hrsh7th/nvim-cmp"
@@ -50,6 +51,9 @@ Plug "github/copilot.vim"
 
 -- Terminal
 Plug "akinsho/toggleterm.nvim"
+
+-- Трабл?
+Plug 'folke/trouble.nvim'
 
 -- Линтер для Go
 Plug "fatih/vim-go"

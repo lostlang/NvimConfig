@@ -1,7 +1,6 @@
 
 require "base.plugin_install"
 require "base.config"
-require "base.mapping"
 require "base.themes"
 
 require "mapping.base"
@@ -23,7 +22,7 @@ require "plugins.nvimcolorizer"
 require "plugins.indentblackline"
 
 -- LSP
-require "plugins.lspinstaller"
+require "plugins.mason"
 require "plugins.lspconfig"
 require "plugins.luasnip"
 require "mapping.luasnip"
@@ -38,6 +37,9 @@ require "plugins.toggleterm"
 
 require "plugins.diffview"
 require "mapping.diffview"
+
+-- трабл
+require "plugins.trouble"
 
 -- Rust
 require "plugins.rust"

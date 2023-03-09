@@ -1,25 +1,77 @@
 
-vim.cmd("colorscheme tokyodark")
+Cmd "colorscheme tokyodark"
 
-vim.opt.termguicolors = true
+Opt.termguicolors = true
 
-vim.opt.termguicolors = true
-vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
+Color = {
+	red = "#ee6d85",
+	yellow = "#d7a65f",
+	green = "#95c561",
+	cyan = "#38a89d",
+	blue = "#7199ee",
+	violet = "#a485dd",
+}
+
+-- Цветные отступы
+Cmd (string.format("hi IndentBlanklineIndent1 guifg=%s", Color.red))
+Cmd (string.format("hi IndentBlanklineIndent2 guifg=%s", Color.yellow))
+Cmd (string.format("hi IndentBlanklineIndent3 guifg=%s", Color.green))
+Cmd (string.format("hi IndentBlanklineIndent4 guifg=%s", Color.cyan))
+Cmd (string.format("hi IndentBlanklineIndent5 guifg=%s", Color.blue))
+Cmd (string.format("hi IndentBlanklineIndent6 guifg=%s", Color.violet))
+
+-- Перекраска LSP
+local diagnostic_signs = {
+	{name = "DiagnosticSignError", text = "", guifg=Color.red},
+	{name = "DiagnosticSignWarn", text = "", guifg=Color.yellow},
+	{name = "DiagnosticSignHint", text = "", guifg=Color.violet},
+	{name = "DiagnosticSignInfo", text = "", guifg=Color.blueh},
+}
+
+local diagnostic_text = {
+	{name = "DiagnosticVirtualTextError", guifg=Color.red, guibg=""},
+	{name = "DiagnosticVirtualTextWarn", guifg=Color.yellow, guibg=""},
+	{name = "DiagnosticVirtualTextHint", guifg=Color.violet, guibg=""},
+	{name = "DiagnosticVirtualTextInfo", guifg=Color.blue, guibg=""},
+}
+
+local diagnostic_underline = {
+	{name = "DiagnosticUnderlineError", guifg=Color.red, guibg=""},
+	{name = "DiagnosticUnderlineWarn", guifg=Color.yellow, guibg=""},
+	{name = "DiagnosticUnderlineHint", guifg=Color.violet, guibg=""},
+	{name = "DiagnosticUnderlineInfo", guifg=Color.blue, guibg=""},
+}
+
+for _, sign in ipairs(diagnostic_signs) do
+	Vim.fn.sign_define(sign.name, {
+		texthl = sign.name,
+		text = sign.text,
+		numhl = sign.name,
+	})
+end
+
+for _, sign in ipairs(diagnostic_signs) do
+	Cmd (string.format("hi %s guifg=%s", sign.name, sign.guifg))
+end
+
+
+for _, text in ipairs(diagnostic_text) do
+	Cmd (string.format("hi %s guifg=%s", text.name, text.guifg))
+end
+
+for _, underline in ipairs(diagnostic_underline) do
+	Cmd (string.format("hi %s guifg=%s", underline.name, underline.guifg))
+end
 
 -- Кастомная тема для lualine
 local colors = {
 	black        = "#1c1e26",
 	white        = "#6C6F93",
-	red          = "#F43E5C",
-	green        = "#09F7A0",
-	blue         = "#25B2BC",
-	yellow       = "#F09383",
-	gray         = "#E95678",
+	red          = Color.red,
+	green        = Color.green,
+	blue         = Color.cyan,
+	yellow       = Color.yellow,
+	gray         = Color.red,
 	darkgray     = "#11121D",
 	lightgray    = "#161821",
 	inactivegray = "#3e445e",
