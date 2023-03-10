@@ -12,14 +12,12 @@ require "mapping.bufferline"
 require "plugins.nvimtree"
 require "mapping.nvimtree"
 
-require "mapping.tagbar"
-
 require "plugins.lualine"
 
 -- Разукрашивание
 require "plugins.treesitter"
 require "plugins.nvimcolorizer"
-require "plugins.indentblackline"
+require "plugins.indentblankline"
 
 -- LSP
 require "plugins.mason"
@@ -40,6 +38,7 @@ require "mapping.diffview"
 
 -- трабл
 require "plugins.trouble"
+require "mapping.trouble"
 
 -- Rust
 require "plugins.rust"

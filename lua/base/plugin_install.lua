@@ -10,10 +10,9 @@ Plug "kyazdani42/nvim-web-devicons"
 
 -- Улучшение подсветки
 Plug "nvim-treesitter/nvim-treesitter"
+Plug "p00f/nvim-ts-rainbow"
 -- Подсветка отступов
 Plug "lukas-reineke/indent-blankline.nvim"
--- Подсветка скобок
-Plug "p00f/nvim-ts-rainbow"
 -- Подсветка цветов
 Plug "norcalli/nvim-colorizer.lua"
 
@@ -26,8 +25,6 @@ Plug "nvim-lualine/lualine.nvim"
 Plug "akinsho/bufferline.nvim"
 -- Дерево файлов
 Plug "nvim-tree/nvim-tree.lua"
--- Дерево файла
-Plug "preservim/tagbar"
 -- Git разница
 Plug "sindrets/diffview.nvim"
 -- Поиско по файлам
