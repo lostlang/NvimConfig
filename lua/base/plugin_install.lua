@@ -52,9 +52,6 @@ Plug("akinsho/toggleterm.nvim")
 -- Инфа по ошибкам
 Plug("folke/trouble.nvim")
 
--- Работа с go, только гоу ту дифинишен остался нужным
-Plug("fatih/vim-go")
-
 -- Линтер общего назначения
 Plug("jose-elias-alvarez/null-ls.nvim")
 

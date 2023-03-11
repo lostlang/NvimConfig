@@ -22,6 +22,7 @@ require("plugins.indentblankline")
 require("plugins.mason")
 require("plugins.lspconfig")
 require("plugins.luasnip")
+require("mapping.lspconfig")
 require("mapping.luasnip")
 
 -- Приятные мелочи
