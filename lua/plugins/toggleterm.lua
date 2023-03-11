@@ -1,7 +1,5 @@
-
-require "toggleterm".setup {
+require("toggleterm").setup({
 	size = 20,
 	open_mapping = [[<c-d>]],
-	shade_terminals = true
-}
-
+	shade_terminals = true,
+})

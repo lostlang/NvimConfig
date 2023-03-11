@@ -1,5 +1,4 @@
-
-require "indent_blankline".setup {
+require("indent_blankline").setup({
 	char_highlight_list = {
 		"IndentBlanklineIndent1",
 		"IndentBlanklineIndent2",
@@ -8,5 +7,4 @@ require "indent_blankline".setup {
 		"IndentBlanklineIndent5",
 		"IndentBlanklineIndent6",
 	},
-}
-
+})

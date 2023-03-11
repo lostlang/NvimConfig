@@ -1,10 +1,9 @@
-
 local present, telescope = pcall(require, "telescope")
 if not present then
 	return
 end
 
-telescope.setup {
+telescope.setup({
 	vimgrep_arguments = {
 		"rg",
 		"--color=never",
@@ -15,14 +14,14 @@ telescope.setup {
 		"--smart-case",
 	},
 	defaults = {
-	file_sorter = require "telescope.sorters".get_fuzzy_file,
-	file_ignore_patterns = {"node_modules"},
-	generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
-	set_env = {["COLORTERM"] = "tokyodark"},
-	file_previewer = require "telescope.previewers".vim_buffer_cat.new,
-	grep_previewer = require "telescope.previewers".vim_buffer_vimgrep.new,
-	qflist_previewer = require "telescope.previewers".vim_buffer_qflist.new,
-	buffer_previewer_maker = require "telescope.previewers".buffer_previewer_maker,
+		file_sorter = require("telescope.sorters").get_fuzzy_file,
+		file_ignore_patterns = { "node_modules" },
+		generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
+		set_env = { ["COLORTERM"] = "tokyodark" },
+		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+		buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
 	},
 	extensions = {
 		fzf = {
@@ -32,13 +31,12 @@ telescope.setup {
 			case_mode = "smart_case",
 		},
 	},
-}
+})
 
-local extensions = {"fzf"}
+local extensions = { "fzf" }
 
 pcall(function()
 	for _, ext in ipairs(extensions) do
 		telescope.load_extension(ext)
 	end
 end)
-

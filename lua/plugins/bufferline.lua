@@ -1,5 +1,4 @@
-
-require "bufferline".setup{
+require("bufferline").setup({
 	options = {
 		buffer_close_icon = "",
 		show_close_icon = false,
@@ -8,11 +7,10 @@ require "bufferline".setup{
 			style = "icon",
 			icon = "",
 		},
-		offsets = {{
+		offsets = { {
 			filetype = "NvimTree",
 			text = "File Explorer",
-			text_align = "center"
-		}},
+			text_align = "center",
+		} },
 	},
-}
-
+})

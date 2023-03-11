@@ -1,8 +1,6 @@
-
-require "trouble".setup {
+require("trouble").setup({
 	position = "right",
 	action_keys = {
-		open_split = {}
-	}
-}
-
+		open_split = {},
+	},
+})

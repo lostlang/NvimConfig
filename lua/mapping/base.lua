@@ -1,4 +1,3 @@
-
 -- Добавление ескейпа на комбинацию клавиш
 Map("i", "jk", "<esc>", Default_opt)
 Map("i", "kj", "<esc>", Default_opt)
@@ -25,4 +24,3 @@ Map("n", "c", "", Default_opt)
 Map("i", "<S-Tab>", "<C-D>", Default_opt)
 Map("v", "<Tab>", ">gv", Default_opt)
 Map("v", "<S-Tab>", "<gv", Default_opt)
-

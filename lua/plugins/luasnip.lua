@@ -1,4 +1,3 @@
-
 Vim.o.completeopt = "menu,menuone,noselect"
 
 local kind_icons = {
@@ -29,20 +28,20 @@ local kind_icons = {
 	TypeParameter = "",
 }
 
-local cmp = require "cmp"
+local cmp = require("cmp")
 
-cmp.setup {
+cmp.setup({
 	completion = {
-		autocomplete = false
+		autocomplete = false,
 	},
 	snippet = {
 		expand = function(args)
-			require "luasnip".lsp_expand(args.body)
+			require("luasnip").lsp_expand(args.body)
 		end,
 	},
 	sources = {
-		{name = "nvim_lsp"},
-		{name = "luasnip"},
+		{ name = "nvim_lsp" },
+		{ name = "luasnip" },
 	},
 	formatting = {
 		format = function(entry, vim_item)
@@ -58,6 +57,5 @@ cmp.setup {
 			})[entry.source.name]
 			return vim_item
 		end,
-	}
-}
-
+	},
+})

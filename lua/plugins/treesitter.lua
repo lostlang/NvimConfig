@@ -1,5 +1,4 @@
-
-require "nvim-treesitter.configs".setup {
+require("nvim-treesitter.configs").setup({
 	ensure_installed = LANG_SUPPORT,
 	sync_install = false,
 	highlight = {
@@ -9,6 +8,5 @@ require "nvim-treesitter.configs".setup {
 	rainbow = {
 		enable = true,
 		extended_mode = true,
-	}
-}
-
+	},
+})
