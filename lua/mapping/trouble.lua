@@ -1,1 +1,1 @@
-Map("n", "<C-x>", ":TroubleToggle<CR>", Default_opt)
+Map("n", "<C-x>", ":TroubleToggle<CR>", { silent = true })

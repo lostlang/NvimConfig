@@ -1,3 +1,3 @@
-Map("n", "<Tab>", ":BufferLineCycleNext<CR>", Default_opt)
-Map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", Default_opt)
-Map("n", "<C-q>", ":BufferLinePickClose<CR>", Default_opt)
+Map2("n", "<Tab>", ":BufferLineCycleNext<CR>", { silent = true })
+Map2("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true })
+Map2("n", "<C-q>", ":BufferLinePickClose<CR>", { silent = true })

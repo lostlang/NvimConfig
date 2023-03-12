@@ -1,26 +1,23 @@
 -- Добавление ескейпа на комбинацию клавиш
-Map("i", "jk", "<esc>", Default_opt)
-Map("i", "kj", "<esc>", Default_opt)
-Map("v", "jk", "<esc>", Default_opt)
-Map("v", "kj", "<esc>", Default_opt)
+Map({ "i", "v" }, "jk", "<ESC>", { silent = true })
+Map({ "i", "v" }, "kj", "<ESC>", { silent = true })
 
 -- Работа с вим конфигом
-Map("n", "<F3>", ":source %<CR>", Default_opt)
-Map("n", "<F4>", ":PlugInstall<CR>", Default_opt)
+Map("n", "<F3>", ":source $MYVIMRC<CR>", { silent = true })
+Map("n", "<F4>", ":PlugInstall<CR>", { silent = true })
 
 -- Выделить весь текст
-Map("n", "<C-a>", "ggVG", Default_opt)
+Map("n", "<C-a>", "ggVG", { silent = true })
 
 -- Сохранить
-Map("n", "<C-s>", ":w<CR>", Default_opt)
+Map("n", "<C-s>", ":w<CR>", { silent = true })
 
 -- Снятие выделения двойным пробелом
-Map("n", "<space><space>", ":nohlsearch<CR>", Default_opt)
+Map("n", "<space><space>", ":nohlsearch<CR>", { silent = true })
 
 -- Отключение не знаю чего, но мешает
-Map("n", "c", "", Default_opt)
+Map("n", "c", "", { silent = true })
 
 -- Работа с табами
-Map("i", "<S-Tab>", "<C-D>", Default_opt)
-Map("v", "<Tab>", ">gv", Default_opt)
-Map("v", "<S-Tab>", "<gv", Default_opt)
+Map({ "i", "v" }, "<S-Tab>", "<C-D>", { silent = true })
+Map("v", "<Tab>", ">gv", { silent = true })

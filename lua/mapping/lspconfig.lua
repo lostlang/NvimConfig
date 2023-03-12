@@ -1,4 +1,4 @@
-Map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", Default_opt)
-Map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", Default_opt)
-Map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", Default_opt)
-Map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", Default_opt)
+Map2("n", "gD", Vim.lsp.buf.declaration, { silent = true })
+Map2("n", "gd", Vim.lsp.buf.definition, { silent = true })
+Map2("n", "K", Vim.lsp.buf.hover, { silent = true })
+Map2("n", "gi", Vim.lsp.buf.implementation, { silent = true })
