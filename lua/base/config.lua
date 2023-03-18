@@ -17,7 +17,18 @@ Opt.listchars:append({ eol = "↵" })
 Opt.list = true
 
 LSP_SERVERS = { "gopls", "pyright", "rust_analyzer", "lua_ls", "elixirls", "tsserver" }
-FORMATER = { "gofumpt", "goimports-reviser", "black", "autopep8", "rustfmt", "stylua", "mix", "yamlfmt", "eslint_d" }
+FORMATER = {
+	"gofumpt",
+	"goimports-reviser",
+	"black",
+	"autopep8",
+	"rustfmt",
+	"stylua",
+	"mix",
+	"yamlfmt",
+	"eslint_d",
+	"prettierd",
+}
 LANG_SUPPORT = { "go", "python", "rust", "lua", "elixir", "markdown", "typescript", "javascript" }
 
 Map = Vim.keymap.set
