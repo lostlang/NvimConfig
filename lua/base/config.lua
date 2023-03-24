@@ -16,7 +16,7 @@ Opt.listchars:append({ tab = ">-" })
 Opt.listchars:append({ eol = "↵" })
 Opt.list = true
 
-LSP_SERVERS = { "gopls", "pyright", "rust_analyzer", "lua_ls", "elixirls", "tsserver", "svelte" }
+LSP_SERVERS = { "gopls", "pyright", "rust_analyzer", "lua_ls", "elixirls", "tsserver", "svelte", "dockerls" }
 FORMATER = {
 	"gofumpt",
 	"goimports-reviser",
@@ -26,7 +26,9 @@ FORMATER = {
 	"stylua",
 	"yamlfmt",
 	"prettierd",
+	"hadolint",
 }
-LANG_SUPPORT = { "go", "python", "rust", "lua", "elixir", "markdown", "typescript", "javascript", "svelte" }
+LANG_SUPPORT =
+	{ "go", "python", "rust", "lua", "elixir", "markdown", "yaml", "typescript", "javascript", "svelte", "dockerfile" }
 
 Map = Vim.keymap.set
