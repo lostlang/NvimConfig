@@ -24,7 +24,6 @@ FORMATER = {
 	"autopep8",
 	"rustfmt",
 	"stylua",
-	"yamlfmt",
 	"prettierd",
 	"hadolint",
 }
