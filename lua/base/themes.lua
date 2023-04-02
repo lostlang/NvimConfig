@@ -3,12 +3,14 @@ Cmd("colorscheme tokyodark")
 Opt.termguicolors = true
 
 Color = {
-	red = "#ee6d85",
-	yellow = "#d7a65f",
-	green = "#95c561",
-	cyan = "#38a89d",
-	blue = "#7199ee",
-	violet = "#a485dd",
+	red = Vim.g.terminal_color_1,
+	yellow = Vim.g.terminal_color_3,
+	green = Vim.g.terminal_color_2,
+	cyan = Vim.g.terminal_color_6,
+	blue = Vim.g.terminal_color_4,
+	violet = Vim.g.terminal_color_5,
+	white = Vim.g.terminal_color_7,
+	black = "#11121D",
 }
 
 -- Цветные отступы
@@ -19,12 +21,15 @@ Cmd(string.format("hi IndentBlanklineIndent4 guifg=%s", Color.cyan))
 Cmd(string.format("hi IndentBlanklineIndent5 guifg=%s", Color.blue))
 Cmd(string.format("hi IndentBlanklineIndent6 guifg=%s", Color.violet))
 
+-- Перекраска статусбара
+Cmd(string.format("hi TabLine guibg=%s", Color.black))
+
 -- Перекраска LSP
 local diagnostic_signs = {
 	{ name = "DiagnosticSignError", text = "", guifg = Color.red },
 	{ name = "DiagnosticSignWarn", text = "", guifg = Color.yellow },
 	{ name = "DiagnosticSignHint", text = "", guifg = Color.violet },
-	{ name = "DiagnosticSignInfo", text = "", guifg = Color.blueh },
+	{ name = "DiagnosticSignInfo", text = "", guifg = Color.blue },
 }
 
 local diagnostic_text = {
@@ -65,11 +70,6 @@ end
 local colors = {
 	black = "#1c1e26",
 	white = "#6C6F93",
-	red = Color.red,
-	green = Color.green,
-	blue = Color.cyan,
-	yellow = Color.yellow,
-	gray = Color.red,
 	darkgray = "#11121D",
 	lightgray = "#161821",
 	inactivegray = "#3e445e",
@@ -77,27 +77,27 @@ local colors = {
 
 Horizon_custom = {
 	normal = {
-		a = { bg = colors.gray, fg = colors.black, gui = "bold" },
+		a = { bg = Color.red, fg = colors.black, gui = "bold" },
 		b = { bg = colors.lightgray, fg = colors.white },
 		c = { bg = colors.darkgray, fg = colors.white },
 	},
 	insert = {
-		a = { bg = colors.blue, fg = colors.black, gui = "bold" },
+		a = { bg = Color.blue, fg = colors.black, gui = "bold" },
 		b = { bg = colors.lightgray, fg = colors.white },
 		c = { bg = colors.darkgray, fg = colors.white },
 	},
 	visual = {
-		a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
+		a = { bg = Color.yellow, fg = colors.black, gui = "bold" },
 		b = { bg = colors.lightgray, fg = colors.white },
 		c = { bg = colors.darkgray, fg = colors.white },
 	},
 	replace = {
-		a = { bg = colors.red, fg = colors.black, gui = "bold" },
+		a = { bg = Color.red, fg = colors.black, gui = "bold" },
 		b = { bg = colors.lightgray, fg = colors.white },
 		c = { bg = colors.darkgray, fg = colors.white },
 	},
 	command = {
-		a = { bg = colors.green, fg = colors.black, gui = "bold" },
+		a = { bg = Color.green, fg = colors.black, gui = "bold" },
 		b = { bg = colors.lightgray, fg = colors.white },
 		c = { bg = colors.darkgray, fg = colors.white },
 	},

@@ -5,11 +5,11 @@ require("base.themes")
 require("mapping.base")
 
 -- Разные плашечки
-require("plugins.bufferline")
-require("mapping.bufferline")
+require("plugins.cokeline")
+require("mapping.cokeline")
 
-require("plugins.nvimtree")
-require("mapping.nvimtree")
+require("plugins.neotree")
+require("mapping.neotree")
 
 require("plugins.lualine")
 
@@ -39,9 +39,6 @@ require("mapping.diffview")
 -- трабл
 require("plugins.trouble")
 require("mapping.trouble")
-
--- Rust
--- require "plugins.rust"
 
 -- Null ls
 require("plugins.nullls")

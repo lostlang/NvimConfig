@@ -21,9 +21,10 @@ Plug("numToStr/Comment.nvim")
 -- Нижняя строка
 Plug("nvim-lualine/lualine.nvim")
 -- Строка влкадок
-Plug("akinsho/bufferline.nvim")
+Plug("willothy/nvim-cokeline")
 -- Дерево файлов
-Plug("nvim-tree/nvim-tree.lua")
+Plug("MunifTanjim/nui.nvim")
+Plug("nvim-neo-tree/neo-tree.nvim")
 -- Git разница
 Plug("sindrets/diffview.nvim")
 -- Поиско по файлам
