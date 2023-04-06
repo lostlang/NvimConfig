@@ -1,6 +1,7 @@
 Cmd("colorscheme tokyodark")
 
 Opt.termguicolors = true
+local set_hl = Vim.api.nvim_set_hl
 
 Color = {
 	red = Vim.g.terminal_color_1,
@@ -14,15 +15,18 @@ Color = {
 }
 
 -- Цветные отступы
-Cmd(string.format("hi IndentBlanklineIndent1 guifg=%s", Color.red))
-Cmd(string.format("hi IndentBlanklineIndent2 guifg=%s", Color.yellow))
-Cmd(string.format("hi IndentBlanklineIndent3 guifg=%s", Color.green))
-Cmd(string.format("hi IndentBlanklineIndent4 guifg=%s", Color.cyan))
-Cmd(string.format("hi IndentBlanklineIndent5 guifg=%s", Color.blue))
-Cmd(string.format("hi IndentBlanklineIndent6 guifg=%s", Color.violet))
+set_hl(0, "IndentBlanklineIndent1", { fg = Color.red })
+set_hl(0, "IndentBlanklineIndent2", { fg = Color.yellow })
+set_hl(0, "IndentBlanklineIndent3", { fg = Color.green })
+set_hl(0, "IndentBlanklineIndent4", { fg = Color.cyan })
+set_hl(0, "IndentBlanklineIndent5", { fg = Color.blue })
+set_hl(0, "IndentBlanklineIndent6", { fg = Color.violet })
 
 -- Перекраска статусбара
-Cmd(string.format("hi TabLine guibg=%s", Color.black))
+set_hl(0, "TabLine", { bg = Color.black })
+
+-- Copilot цвет Lsp
+set_hl(0, "CmpItemKindCopilot", { fg = Color.green })
 
 -- Перекраска LSP
 local diagnostic_signs = {
@@ -55,15 +59,15 @@ for _, sign in ipairs(diagnostic_signs) do
 end
 
 for _, sign in ipairs(diagnostic_signs) do
-	Cmd(string.format("hi %s guifg=%s", sign.name, sign.guifg))
+	set_hl(0, sign.name, { fg = sign.guifg })
 end
 
 for _, text in ipairs(diagnostic_text) do
-	Cmd(string.format("hi %s guifg=%s", text.name, text.guifg))
+	set_hl(0, text.name, { fg = text.guifg, bg = text.guibg })
 end
 
 for _, underline in ipairs(diagnostic_underline) do
-	Cmd(string.format("hi %s guifg=%s", underline.name, underline.guifg))
+	set_hl(0, underline.name, { fg = underline.guifg })
 end
 
 -- Кастомная тема для lualine

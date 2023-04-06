@@ -14,10 +14,8 @@ Plug("p00f/nvim-ts-rainbow")
 Plug("lukas-reineke/indent-blankline.nvim")
 -- Подсветка цветов
 Plug("norcalli/nvim-colorizer.lua")
-
 -- Простое коментирование
 Plug("numToStr/Comment.nvim")
-
 -- Нижняя строка
 Plug("nvim-lualine/lualine.nvim")
 -- Строка влкадок
@@ -45,7 +43,8 @@ Plug("hrsh7th/cmp-nvim-lsp")
 Plug("saadparwaiz1/cmp_luasnip")
 
 -- Copilot
-Plug("github/copilot.vim")
+Plug("zbirenbaum/copilot.lua")
+Plug("zbirenbaum/copilot-cmp")
 
 -- Terminal
 Plug("akinsho/toggleterm.nvim")

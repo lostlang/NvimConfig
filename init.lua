@@ -24,6 +24,7 @@ require("plugins.lspconfig")
 require("plugins.luasnip")
 require("mapping.lspconfig")
 require("mapping.luasnip")
+require("plugins.copilot")
 
 -- Приятные мелочи
 require("plugins.comment")
