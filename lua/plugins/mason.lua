@@ -14,8 +14,8 @@ require("mason-lspconfig").setup({
 })
 
 require("mason-null-ls").setup({
-	automatic_setup = true,
 	ensure_installed = FORMATER,
+	handlers = {},
+	automatic_setup = true,
+	automatic_installation = true,
 })
-
-require("mason-null-ls").setup_handlers()
