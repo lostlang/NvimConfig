@@ -1,6 +1,7 @@
 Vim = vim
 Opt = Vim.opt
 Cmd = Vim.cmd
+Map = Vim.keymap.set
 
 Opt.mouse = "a"
 Opt.clipboard = "unnamedplus"
@@ -29,5 +30,3 @@ FORMATER = {
 }
 LANG_SUPPORT =
 	{ "go", "python", "rust", "lua", "elixir", "markdown", "yaml", "typescript", "javascript", "svelte", "dockerfile" }
-
-Map = Vim.keymap.set

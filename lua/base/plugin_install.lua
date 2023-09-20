@@ -1,6 +1,6 @@
-local Plug = vim.fn["plug#"]
+local Plug = Vim.fn["plug#"]
 
-vim.call("plug#begin", "~/.config/nvim/plugged")
+Vim.call("plug#begin", "~/.config/nvim/plugged")
 
 -- Темы
 Plug("tiagovla/tokyodark.nvim")
@@ -55,4 +55,4 @@ Plug("folke/trouble.nvim")
 -- Линтер общего назначения
 Plug("jose-elias-alvarez/null-ls.nvim")
 
-vim.call("plug#end")
+Vim.call("plug#end")

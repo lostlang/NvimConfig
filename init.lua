@@ -1,5 +1,5 @@
-require("base.plugin_install")
 require("base.config")
+require("base.plugin_install")
 require("base.themes")
 
 require("mapping.base")
