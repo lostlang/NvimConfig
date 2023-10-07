@@ -15,12 +15,12 @@ Color = {
 }
 
 -- Цветные отступы
-set_hl(0, "IndentBlanklineIndent1", { fg = Color.red })
-set_hl(0, "IndentBlanklineIndent2", { fg = Color.yellow })
-set_hl(0, "IndentBlanklineIndent3", { fg = Color.green })
-set_hl(0, "IndentBlanklineIndent4", { fg = Color.cyan })
-set_hl(0, "IndentBlanklineIndent5", { fg = Color.blue })
-set_hl(0, "IndentBlanklineIndent6", { fg = Color.violet })
+set_hl(0, "RainbowRed", { fg = Color.red })
+set_hl(0, "RainbowYellow", { fg = Color.yellow })
+set_hl(0, "RainbowGreen", { fg = Color.green })
+set_hl(0, "RainbowCyan", { fg = Color.cyan })
+set_hl(0, "RainbowBlue", { fg = Color.blue })
+set_hl(0, "RainbowViolet", { fg = Color.violet })
 
 -- Перекраска статусбара
 set_hl(0, "TabLine", { bg = Color.black })
