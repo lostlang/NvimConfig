@@ -1,58 +1,111 @@
-local Plug = Vim.fn["plug#"]
+require("lazy").setup({
+	-- Темы
+	{ "tiagovla/tokyodark.nvim", opts = {} },
 
-Vim.call("plug#begin", "~/.config/nvim/plugged")
+	-- Улучшение подсветки
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	--Plug("p00f/nvim-ts-rainbow")
+	-- Подсветка отступов
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
--- Темы
-Plug("tiagovla/tokyodark.nvim")
--- Иконки
-Plug("kyazdani42/nvim-web-devicons")
+	-- Простое коментирование
+	{ "numToStr/Comment.nvim", opts = {}, lazy = false },
+	-- Нижняя строка
+	{ "nvim-lualine/lualine.nvim", opts = {} },
+	-- Строка влкадок
+	{
+		"willothy/nvim-cokeline",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons",
+			"stevearc/resession.nvim",
+		},
+		config = true,
+	},
+	-- Дерево файлов
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+	},
+	-- Git разница
+	{
+		"sindrets/diffview.nvim",
+	},
+	-- Поиско по файлам
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.4",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+	-- fzf для telescope
+	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 
--- Улучшение подсветки
-Plug("nvim-treesitter/nvim-treesitter")
-Plug("p00f/nvim-ts-rainbow")
--- Подсветка отступов
-Plug("lukas-reineke/indent-blankline.nvim")
--- Подсветка цветов
-Plug("norcalli/nvim-colorizer.lua")
--- Простое коментирование
-Plug("numToStr/Comment.nvim")
--- Нижняя строка
-Plug("nvim-lualine/lualine.nvim")
--- Строка влкадок
-Plug("willothy/nvim-cokeline")
--- Дерево файлов
-Plug("MunifTanjim/nui.nvim")
-Plug("nvim-neo-tree/neo-tree.nvim")
--- Git разница
-Plug("sindrets/diffview.nvim")
--- Поиско по файлам
-Plug("nvim-telescope/telescope.nvim")
--- fzf для telescope
-Plug("nvim-telescope/telescope-fzf-native.nvim")
--- Библиотека для работы telescope и diffview
-Plug("nvim-lua/plenary.nvim")
+	-- LSP
+	{
+		-- LSP Configuration & Plugins
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			-- Automatically install LSPs to stdpath for neovim
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
 
--- LSP
-Plug("williamboman/mason.nvim")
-Plug("williamboman/mason-lspconfig.nvim")
-Plug("jay-babu/mason-null-ls.nvim")
-Plug("neovim/nvim-lspconfig")
-Plug("L3MON4D3/LuaSnip")
-Plug("hrsh7th/nvim-cmp")
-Plug("hrsh7th/cmp-nvim-lsp")
-Plug("saadparwaiz1/cmp_luasnip")
+			-- Useful status updates for LSP
+			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+			{ "j-hui/fidget.nvim", tag = "legacy", opts = {} },
 
--- Copilot
-Plug("zbirenbaum/copilot.lua")
-Plug("zbirenbaum/copilot-cmp")
+			-- Additional lua configuration, makes nvim stuff amazing!
+			"folke/neodev.nvim",
+		},
+	},
 
--- Terminal
-Plug("akinsho/toggleterm.nvim")
+	{
+		"jay-babu/mason-null-ls.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"williamboman/mason.nvim",
+			"jose-elias-alvarez/null-ls.nvim",
+		},
+	},
 
--- Инфа по ошибкам
-Plug("folke/trouble.nvim")
+	{
+		-- Autocompletion
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			-- Snippet Engine & its associated nvim-cmp source
+			"L3MON4D3/LuaSnip",
+			"saadparwaiz1/cmp_luasnip",
 
--- Линтер общего назначения
-Plug("jose-elias-alvarez/null-ls.nvim")
+			-- Adds LSP completion capabilities
+			"hrsh7th/cmp-nvim-lsp",
 
-Vim.call("plug#end")
+			-- Adds a number of user-friendly snippets
+			"rafamadriz/friendly-snippets",
+		},
+	},
+
+	-- Copilot
+	--Plug("zbirenbaum/copilot.lua")
+	{
+		"zbirenbaum/copilot-cmp",
+		dependencies = {
+			"zbirenbaum/copilot.lua",
+		},
+	},
+
+	-- Terminal
+	{ "akinsho/toggleterm.nvim", version = "*" },
+
+	-- Инфа по ошибкам
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+
+	-- Линтер общего назначения
+	{ "jose-elias-alvarez/null-ls.nvim" },
+})

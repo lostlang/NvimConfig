@@ -13,7 +13,7 @@ Opt.smartindent = true
 
 -- тестовые символы ·•●
 Opt.listchars:append({ space = "•" })
-Opt.listchars:append({ tab = "█-" })
+Opt.listchars:append({ tab = "▎-" })
 Opt.listchars:append({ eol = "↵" })
 Opt.list = true
 
