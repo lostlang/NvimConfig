@@ -17,7 +17,7 @@ require("lazy").setup({
 		"willothy/nvim-cokeline",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons",
 			"stevearc/resession.nvim",
 		},
 		config = true,
