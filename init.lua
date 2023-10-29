@@ -28,6 +28,7 @@ require("mapping.neotree")
 require("plugins.lualine")
 
 -- Разукрашивание
+require("plugins.illuminate")
 
 -- LSP
 require("plugins.mason")
@@ -55,4 +56,5 @@ require("plugins.trouble")
 require("mapping.trouble")
 
 -- Null ls
+-- require("plugins.autofmt")
 require("plugins.nullls")

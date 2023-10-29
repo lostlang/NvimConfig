@@ -27,6 +27,7 @@ local kind_icons = {
 	Operator = "",
 	TypeParameter = "",
 	Copilot = "",
+	Codeium = "",
 }
 
 local cmp = require("cmp")
@@ -42,6 +43,7 @@ cmp.setup({
 	},
 	sources = {
 		{ name = "copilot" },
+		{ name = "codeium" },
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 	},
@@ -57,6 +59,7 @@ cmp.setup({
 				path = "[Path]",
 				nvim_lsp_signature_help = "[Signature]",
 				copilot = "[AI]",
+				codeium = "[AI]",
 			})[entry.source.name]
 			return vim_item
 		end,
