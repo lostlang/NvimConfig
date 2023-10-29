@@ -28,9 +28,7 @@ require("mapping.neotree")
 require("plugins.lualine")
 
 -- Разукрашивание
-require("plugins.treesitter")
-require("plugins.indentblankline")
---
+
 -- LSP
 require("plugins.mason")
 require("plugins.lspconfig")
@@ -40,7 +38,9 @@ require("mapping.luasnip")
 require("plugins.copilot")
 
 -- Приятные мелочи
-require("plugins.comment")
+require("plugins.ibl")
+require("plugins.treesitter")
+-- require("plugins.comment")
 
 require("plugins.telescope")
 require("mapping.telescope")

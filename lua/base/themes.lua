@@ -1,5 +1,4 @@
 Cmd("colorscheme tokyodark")
-
 Opt.termguicolors = true
 local set_hl = Vim.api.nvim_set_hl
 
