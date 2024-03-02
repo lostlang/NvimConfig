@@ -139,6 +139,9 @@ require("lazy").setup({
 	-- Terminal
 	{ "akinsho/toggleterm.nvim", version = "*" },
 
+	-- Колорайзер
+	{ "norcalli/nvim-colorizer.lua" },
+
 	-- Инфа по ошибкам
 	{
 		"folke/trouble.nvim",

@@ -17,16 +17,25 @@ Opt.listchars:append({ tab = "▎-" })
 Opt.listchars:append({ eol = "↵" })
 Opt.list = true
 
-LSP_SERVERS = { "gopls", "pyright", "rust_analyzer", "lua_ls", "elixirls", "tsserver", "svelte", "dockerls" }
+LSP_SERVERS = {
+	"gopls",
+	"lua_ls",
+	--"pyright", "rust_analyzer", "elixirls", "tsserver", "svelte", "dockerls"
+}
+
 FORMATER = {
 	"gofumpt",
 	"goimports-reviser",
 	"black",
 	"autopep8",
-	"rustfmt",
+	-- "rustfmt",
 	"stylua",
-	"prettierd",
-	"hadolint",
+	-- "prettierd",
+	-- "hadolint",
 }
-LANG_SUPPORT =
-	{ "go", "python", "rust", "lua", "elixir", "markdown", "yaml", "typescript", "javascript", "svelte", "dockerfile" }
+
+LANG_SUPPORT = {
+	"go",
+	"lua",
+	--"python", "rust", "elixir", "markdown", "yaml", "typescript", "javascript", "svelte", "dockerfile"
+}
