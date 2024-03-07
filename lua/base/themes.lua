@@ -29,9 +29,9 @@ set_hl(0, "CmpItemKindCopilot", { fg = Color.green })
 
 -- Перекраска LSP
 local diagnostic_signs = {
-	{ name = "DiagnosticSignError", text = "", guifg = Color.red },
-	{ name = "DiagnosticSignWarn", text = "", guifg = Color.yellow },
-	{ name = "DiagnosticSignHint", text = "", guifg = Color.violet },
+	{ name = "DiagnosticSignError", text = "", guifg = Color.red },
+	{ name = "DiagnosticSignWarn", text = "", guifg = Color.yellow },
+	{ name = "DiagnosticSignHint", text = "󱠂", guifg = Color.violet },
 	{ name = "DiagnosticSignInfo", text = "", guifg = Color.blue },
 }
 
