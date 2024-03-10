@@ -1,41 +1,37 @@
-Vim = vim
-Opt = Vim.opt
-Cmd = Vim.cmd
-Map = Vim.keymap.set
-
-Opt.mouse = "a"
-Opt.clipboard = "unnamedplus"
-Opt.colorcolumn = "100"
-Opt.number = true
-Opt.relativenumber = true
-Opt.encoding = "utf-8"
-Opt.smartindent = true
+vim.opt.mouse = "a"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.colorcolumn = "100"
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.encoding = "utf-8"
+vim.opt.smartindent = true
+vim.opt.spelllang = { "en_us", "ru" }
+vim.opt.spell = true
 
 -- тестовые символы ·•●
-Opt.listchars:append({ space = "•" })
-Opt.listchars:append({ tab = "▎-" })
-Opt.listchars:append({ eol = "↵" })
-Opt.list = true
+vim.opt.listchars:append({ space = "•" })
+vim.opt.listchars:append({ tab = "▎-" })
+vim.opt.listchars:append({ eol = "↵" })
+vim.opt.list = true
 
 LSP_SERVERS = {
 	"gopls",
-	"lua_ls",
-	--"pyright", "rust_analyzer", "elixirls", "tsserver", "svelte", "dockerls"
+	"pyright",
+	--"rust_analyzer", "elixirls", "tsserver", "svelte", "dockerls"
 }
 
 FORMATER = {
 	"gofumpt",
 	"goimports-reviser",
+	"stylua",
 	"black",
 	"autopep8",
-	-- "rustfmt",
-	"stylua",
-	-- "prettierd",
-	-- "hadolint",
+	-- "rustfmt", "prettierd", "hadolint",
 }
 
 LANG_SUPPORT = {
 	"go",
 	"lua",
-	--"python", "rust", "elixir", "markdown", "yaml", "typescript", "javascript", "svelte", "dockerfile"
+	"python",
+	--"rust", "elixir", "markdown", "yaml", "typescript", "javascript", "svelte", "dockerfile"
 }

@@ -56,7 +56,6 @@ require("plugins.trouble")
 require("mapping.trouble")
 
 -- Null ls
--- require("plugins.autofmt")
 require("plugins.nullls")
 
 -- Колорайзер

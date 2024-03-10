@@ -1,1 +1,1 @@
-Map("n", "<C-x>", ":TroubleToggle<CR>", { silent = true })
+vim.keymap.set("n", "<C-x>", ":TroubleToggle<CR>", { silent = true })

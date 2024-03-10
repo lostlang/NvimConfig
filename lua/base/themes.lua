@@ -1,15 +1,15 @@
-Cmd("colorscheme tokyodark")
-Opt.termguicolors = true
-local set_hl = Vim.api.nvim_set_hl
+vim.cmd("colorscheme tokyodark")
+vim.opt.termguicolors = true
+local set_hl = vim.api.nvim_set_hl
 
 Color = {
-	red = Vim.g.terminal_color_1,
-	yellow = Vim.g.terminal_color_3,
-	green = Vim.g.terminal_color_2,
-	cyan = Vim.g.terminal_color_6,
-	blue = Vim.g.terminal_color_4,
-	violet = Vim.g.terminal_color_5,
-	white = Vim.g.terminal_color_7,
+	red = vim.g.terminal_color_1,
+	yellow = vim.g.terminal_color_3,
+	green = vim.g.terminal_color_2,
+	cyan = vim.g.terminal_color_6,
+	blue = vim.g.terminal_color_4,
+	violet = vim.g.terminal_color_5,
+	white = vim.g.terminal_color_7,
 	black = "#11121D",
 }
 
@@ -50,7 +50,7 @@ local diagnostic_underline = {
 }
 
 for _, sign in ipairs(diagnostic_signs) do
-	Vim.fn.sign_define(sign.name, {
+	vim.fn.sign_define(sign.name, {
 		texthl = sign.name,
 		text = sign.text,
 		numhl = sign.name,

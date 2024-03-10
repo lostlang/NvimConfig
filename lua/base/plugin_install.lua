@@ -82,6 +82,7 @@ require("lazy").setup({
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
+			"ii14/emmylua-nvim",
 
 			-- Useful status updates for LSP
 			{

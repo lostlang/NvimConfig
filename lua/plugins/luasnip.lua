@@ -1,4 +1,4 @@
-Vim.o.completeopt = "menu,menuone,noselect"
+vim.o.completeopt = "menu,menuone,noselect"
 
 local kind_icons = {
 	Text = "",

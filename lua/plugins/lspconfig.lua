@@ -12,3 +12,13 @@ for _, lsp in ipairs(LSP_SERVERS) do
 		on_attach = on_attach,
 	})
 end
+
+nvim_lsp.lua_ls.setup({
+	settings = {
+		Lua = {
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+		},
+	},
+})
