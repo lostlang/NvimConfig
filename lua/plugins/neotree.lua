@@ -6,4 +6,12 @@ require("neo-tree").setup({
 			["o"] = "open",
 		},
 	},
+	default_component_configs = {
+		git_status = {
+			symbols = {
+				unstaged = " ",
+				staged = "",
+			},
+		},
+	},
 })

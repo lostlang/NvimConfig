@@ -1,25 +1,30 @@
 local is_picking_focus = require("cokeline/mappings").is_picking_focus
 local is_picking_close = require("cokeline/mappings").is_picking_close
-local get_hex = require("cokeline.hlgroups").get_hl_attr
 
-local dark = Color.black
-local text = get_hex("Comment", "fg")
-local grey = get_hex("ColorColumn", "bg")
-local light = get_hex("Comment", "fg")
+local color = {
+	black = "#06080A",
+	white = "#A0A8CD",
+	red = "#FE6D85",
+	green = "#98C379",
+	blue = "#9FBBF3",
+	orange = "#F6955B",
+	darkgray = "#11121D",
+	lightgray = "#212234",
+}
 
 require("cokeline").setup({
 	default_hl = {
 		fg = function(buffer)
 			if buffer.is_focused then
-				return dark
+				return color.black
 			end
-			return text
+			return color.white
 		end,
 		bg = function(buffer)
 			if buffer.is_focused then
-				return Color.yellow
+				return color.orange
 			end
-			return grey
+			return color.lightgray
 		end,
 	},
 	components = {
@@ -30,12 +35,12 @@ require("cokeline").setup({
 				end
 				return " "
 			end,
-			fg = dark,
+			fg = color.darkgray,
 			bg = function(buffer)
 				if buffer.is_focused then
-					return Color.yellow
+					return color.orange
 				end
-				return grey
+				return color.lightgray
 			end,
 		},
 		{
@@ -50,16 +55,16 @@ require("cokeline").setup({
 			end,
 			fg = function(buffer)
 				if is_picking_focus() then
-					return Color.yellow
+					return color.orange
 				end
 				if is_picking_close() then
-					return Color.red
+					return color.red
 				end
 
 				if buffer.is_focused then
-					return dark
+					return color.black
 				else
-					return light
+					return color.blue
 				end
 			end,
 			style = function(_)
@@ -83,41 +88,43 @@ require("cokeline").setup({
 			end,
 			fg = function(buffer)
 				if buffer.is_focused then
-					return dark
+					return color.black
 				end
-				return Color.green
+				return color.green
 			end,
 		},
 		{
 			text = " ",
 			fg = function(buffer)
 				if buffer.is_focused then
-					return dark
+					return color.black
 				end
-				return Color.red
+				return color.red
 			end,
 			delete_buffer_on_left_click = true,
 		},
 		{
-			text = "",
+			text = " ",
 			fg = function(buffer)
 				if buffer.is_focused then
-					return Color.yellow
+					return color.orange
 				end
-				return grey
+				return color.lightgray
 			end,
-			bg = dark,
+			bg = color.darkgray,
 		},
 	},
 	sidebar = {
 		filetype = "neo-tree",
 		components = {
 			{
-				text = "        Neo-tree",
-				fg = Color.yellow,
-				bg = dark,
+				text = "        󰹩 Neo-Tree",
+				fg = color.green,
+				bg = color.darkgray,
 				style = "bold",
 			},
 		},
 	},
 })
+
+vim.api.nvim_set_hl(0, "TabLineFill", { fg = color.darkgray })

@@ -13,22 +13,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("base.config")
-require("base.plugin_install")
+require("base.plugins")
 require("base.themes")
 
 require("mapping.base")
-
--- Разные плашечки
-require("plugins.cokeline")
-require("mapping.cokeline")
-
-require("plugins.neotree")
-require("mapping.neotree")
-
-require("plugins.lualine")
-
--- Разукрашивание
-require("plugins.illuminate")
 
 -- LSP
 require("plugins.mason")
@@ -38,25 +26,8 @@ require("mapping.lspconfig")
 require("mapping.luasnip")
 require("plugins.copilot")
 
--- Приятные мелочи
-require("plugins.ibl")
-require("plugins.treesitter")
--- require("plugins.comment")
-
 require("plugins.telescope")
 require("mapping.telescope")
 
-require("plugins.toggleterm")
-
-require("plugins.diffview")
-require("mapping.diffview")
-
--- Tрабл
-require("plugins.trouble")
-require("mapping.trouble")
-
 -- Null ls
 require("plugins.nullls")
-
--- Колорайзер
-require("plugins.colorize")

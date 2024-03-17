@@ -1,20 +1,19 @@
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = Horizon_custom,
+		theme = Tokyodark,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		disabled_filetypes = {},
 		always_divide_middle = true,
 		globalstatus = false,
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = { "branch", "filename", "diff" },
-		lualine_c = { "diagnostics" },
-		lualine_x = { "filetype" },
-		lualine_y = { "encoding" },
-		lualine_z = { "location" },
+		lualine_b = { "branch", "filename" },
+		lualine_c = { "diff", "diagnostics" },
+		lualine_x = { "encoding", "filetype" },
+		lualine_y = { "location" },
+		lualine_z = { 'os.date("!%H:%M", os.time() + (60 * 60 * 5))' },
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -24,6 +23,4 @@ require("lualine").setup({
 		lualine_y = {},
 		lualine_z = {},
 	},
-	tabline = {},
-	extensions = {},
 })

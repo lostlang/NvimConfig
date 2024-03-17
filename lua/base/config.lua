@@ -16,6 +16,7 @@ vim.opt.list = true
 
 LSP_SERVERS = {
 	"gopls",
+	"lua_ls",
 	"pyright",
 	--"rust_analyzer", "elixirls", "tsserver", "svelte", "dockerls"
 }
@@ -23,6 +24,7 @@ LSP_SERVERS = {
 FORMATER = {
 	"gofumpt",
 	"goimports-reviser",
+	"gofumpt",
 	"stylua",
 	"black",
 	"autopep8",
