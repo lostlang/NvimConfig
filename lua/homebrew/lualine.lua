@@ -37,7 +37,7 @@ Tokyodark = {
 		c = { bg = colors.darkgray, fg = colors.white },
 	},
 	inactive = {
-		a = { bg = colors.darkgray, fg = colors.inactivegray, gui = "bold" },
+		a = { bg = colors.darkgray, fg = colors.inactivegray },
 		b = { bg = colors.darkgray, fg = colors.inactivegray },
 		c = { bg = colors.darkgray, fg = colors.inactivegray },
 	},

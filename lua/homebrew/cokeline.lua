@@ -11,22 +11,8 @@ local color = {
 	yellow = vim.g.terminal_color_3,
 }
 
-require("cokeline").setup({
-	default_hl = {
-		fg = function(buffer)
-			if buffer.is_focused then
-				return color.light_white
-			end
-			return color.black
-		end,
-		bg = function(buffer)
-			if buffer.is_focused then
-				return color.blue
-			end
-			return color.white
-		end,
-	},
-	components = {
+function setup()
+	M = {
 		{
 			text = function(buffer)
 				if buffer.index ~= 1 then
@@ -102,16 +88,7 @@ require("cokeline").setup({
 			end,
 			bg = color.light_white,
 		},
-	},
-	sidebar = {
-		filetype = "neo-tree",
-		components = {
-			{
-				text = "        󰹩 Neo-Tree",
-				fg = color.green,
-				bg = color.white,
-				style = "bold",
-			},
-		},
-	},
-})
+	}
+
+	return M
+end

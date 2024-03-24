@@ -1,9 +1,10 @@
 require("lazy").setup({
 	-- Theme
 	{
-		"tiagovla/tokyodark.nvim",
+		"lostlang/lostsand.nvim",
+		-- dir = "~/Projects/lostsand.nvim",
 		config = function()
-			vim.cmd([[colorscheme tokyodark]])
+			vim.cmd([[colorscheme lostsand]])
 		end,
 	},
 
@@ -149,7 +150,7 @@ require("lazy").setup({
 		config = true,
 	},
 
-	-- Поиско по файлам
+	-- Поиск по файлам
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.4",
@@ -232,5 +233,31 @@ require("lazy").setup({
 		config = function()
 			require("codeium").setup({})
 		end,
+	},
+
+	-- New plugins
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {},
+	},
+	{
+		"startup-nvim/startup.nvim",
+		requires = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			-- require("startup").setup()
+		end,
+	},
+	{
+		"rcarriga/nvim-notify",
+		event = "VeryLazy",
+		config = function() end,
 	},
 })
