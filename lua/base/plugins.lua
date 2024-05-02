@@ -2,7 +2,8 @@ require("lazy").setup({
 	-- Theme
 	{
 		"lostlang/lostsand.nvim",
-		-- dir = "~/Projects/lostsand.nvim",
+		lazy = false,
+		dir = "~/Projects/lostsand.nvim",
 		config = function()
 			vim.cmd([[colorscheme lostsand]])
 		end,
@@ -147,7 +148,7 @@ require("lazy").setup({
 	{
 		"windwp/nvim-autopairs",
 		event = "VeryLazy",
-		config = true,
+		-- config = true,
 	},
 
 	-- Поиск по файлам
@@ -206,16 +207,6 @@ require("lazy").setup({
 		},
 	},
 
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && npm install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	},
-
 	-- Copilot
 	{
 		"zbirenbaum/copilot-cmp",
@@ -255,9 +246,24 @@ require("lazy").setup({
 			-- require("startup").setup()
 		end,
 	},
+	-- {
+	-- 	"rcarriga/nvim-notify",
+	-- 	event = "VeryLazy",
+	-- 	config = function() end,
+	-- },
 	{
-		"rcarriga/nvim-notify",
-		event = "VeryLazy",
-		config = function() end,
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
 	},
+	-- {
+	-- 	"jeniasaigak/goplay.nvim",
+	-- 	event = "VeryLazy",
+	-- 	config = function()
+	-- 		require("goplay").setup()
+	-- 	end,
+	-- },
 })

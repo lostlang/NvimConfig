@@ -18,7 +18,8 @@ LSP_SERVERS = {
 	"gopls",
 	"lua_ls",
 	"pyright",
-	--"rust_analyzer", "elixirls", "tsserver", "svelte", "dockerls"
+	"rust_analyzer",
+	--"elixirls", "tsserver", "svelte", "dockerls"
 }
 
 FORMATER = {
@@ -28,12 +29,16 @@ FORMATER = {
 	"stylua",
 	"black",
 	"autopep8",
-	-- "rustfmt", "prettierd", "hadolint",
+	-- "prettierd", "hadolint",
 }
 
 LANG_SUPPORT = {
 	"go",
 	"lua",
 	"python",
-	--"rust", "elixir", "markdown", "yaml", "typescript", "javascript", "svelte", "dockerfile"
+	"markdown",
+	"rust",
+	"yaml",
+	"toml",
+	--"elixir", "typescript", "javascript", "svelte", "dockerfile"
 }
