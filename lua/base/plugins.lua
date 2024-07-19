@@ -3,7 +3,7 @@ require("lazy").setup({
 	{
 		"lostlang/lostsand.nvim",
 		lazy = false,
-		dir = "~/Projects/lostsand.nvim",
+		-- dir = "~/Projects/lostsand.nvim",
 		config = function()
 			vim.cmd([[colorscheme lostsand]])
 		end,
@@ -105,14 +105,6 @@ require("lazy").setup({
 			require("mapping.neotree")
 		end,
 	},
-	-- Terminal
-	{
-		"akinsho/toggleterm.nvim",
-		event = "VeryLazy",
-		config = function()
-			require("plugins.toggleterm")
-		end,
-	},
 	-- Info about errors
 	{
 		"folke/trouble.nvim",
@@ -207,24 +199,24 @@ require("lazy").setup({
 		},
 	},
 
-	-- Copilot
-	{
-		"zbirenbaum/copilot-cmp",
-		dependencies = {
-			"zbirenbaum/copilot.lua",
-		},
-	},
+	-- -- Copilot
+	-- {
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	dependencies = {
+	-- 		"zbirenbaum/copilot.lua",
+	-- 	},
+	-- },
 	-- Бесплатный аналог
-	{
-		"Exafunction/codeium.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"hrsh7th/nvim-cmp",
-		},
-		config = function()
-			require("codeium").setup({})
-		end,
-	},
+	--{
+	--	"Exafunction/codeium.nvim",
+	--	dependencies = {
+	--		"nvim-lua/plenary.nvim",
+	--		"hrsh7th/nvim-cmp",
+	--	},
+	--	config = function()
+	--		require("codeium").setup({})
+	--	end,
+	--},
 
 	-- New plugins
 	{

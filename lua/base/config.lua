@@ -19,6 +19,7 @@ LSP_SERVERS = {
 	"lua_ls",
 	"pyright",
 	"rust_analyzer",
+	"somesass_ls",
 	--"elixirls", "tsserver", "svelte", "dockerls"
 }
 

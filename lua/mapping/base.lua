@@ -1,7 +1,3 @@
--- Добавление ескейпа на комбинацию клавиш
-vim.keymap.set({ "i", "v" }, "jk", "<ESC>", { silent = true })
-vim.keymap.set({ "i", "v" }, "kj", "<ESC>", { silent = true })
-
 -- Работа с вим конфигом
 vim.keymap.set("n", "<F3>", ":source %<CR>", { silent = true })
 

@@ -24,7 +24,6 @@ require("plugins.lspconfig")
 require("plugins.luasnip")
 require("mapping.lspconfig")
 require("mapping.luasnip")
-require("plugins.copilot")
 
 require("plugins.telescope")
 require("mapping.telescope")
