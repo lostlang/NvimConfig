@@ -3,7 +3,7 @@ require("lazy").setup({
 	{
 		"lostlang/lostsand.nvim",
 		lazy = false,
-		-- dir = "~/Projects/lostsand.nvim",
+		-- dir = "~/Project/lostsand.nvim",
 		config = function()
 			vim.cmd([[colorscheme lostsand]])
 		end,
@@ -46,8 +46,11 @@ require("lazy").setup({
 		"folke/todo-comments.nvim",
 		event = "VeryLazy",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		config = true,
+		config = function()
+			require("plugins.todo")
+		end,
 	},
+
 	-- Color highlighting
 	{
 		"norcalli/nvim-colorizer.lua",
@@ -76,20 +79,6 @@ require("lazy").setup({
 			require("plugins.lualine")
 		end,
 	},
-	-- Buffer line
-	{
-		"willothy/nvim-cokeline",
-		event = "VeryLazy",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
-			"stevearc/resession.nvim",
-		},
-		config = function()
-			require("plugins.cokeline")
-			require("mapping.cokeline")
-		end,
-	},
 	-- File tree
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -104,6 +93,14 @@ require("lazy").setup({
 			require("plugins.neotree")
 			require("mapping.neotree")
 		end,
+		init = function()
+			if vim.fn.argc(-1) == 1 then
+				local stat = vim.loop.fs_stat(vim.fn.argv(0))
+				if stat and stat.type == "directory" then
+					require("neo-tree")
+				end
+			end
+		end,
 	},
 	-- Info about errors
 	{
@@ -112,10 +109,7 @@ require("lazy").setup({
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = function()
-			require("plugins.trouble")
-			require("mapping.trouble")
-		end,
+		opts = {},
 	},
 	-- Git разница
 	{
@@ -155,6 +149,10 @@ require("lazy").setup({
 				build = "make",
 			},
 		},
+		config = function()
+			require("plugins.telescope")
+			require("mapping.telescope")
+		end,
 	},
 
 	-- LSP
@@ -168,9 +166,20 @@ require("lazy").setup({
 			-- Useful status updates for LSP
 			{
 				"j-hui/fidget.nvim",
-				tag = "legacy",
+				opts = {},
+			},
+			{
+				"ray-x/lsp_signature.nvim",
+				event = "VeryLazy",
+				opts = {},
 			},
 		},
+		config = function()
+			require("plugins.mason")
+			require("plugins.lspconfig")
+			require("mapping.lspconfig")
+			require("plugins.lang.bundle")
+		end,
 	},
 	-- Автодополнения к LSP
 	{
@@ -186,10 +195,14 @@ require("lazy").setup({
 			-- Adds a number of user-friendly snippets
 			"rafamadriz/friendly-snippets",
 		},
+		config = function()
+			require("plugins.cmp")
+			require("mapping.cmp")
+		end,
 	},
 	-- Линтер
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		dependencies = {
 			{
 				"jay-babu/mason-null-ls.nvim",
@@ -197,47 +210,33 @@ require("lazy").setup({
 				dependencies = { "williamboman/mason.nvim" },
 			},
 		},
-	},
-
-	-- -- Copilot
-	-- {
-	-- 	"zbirenbaum/copilot-cmp",
-	-- 	dependencies = {
-	-- 		"zbirenbaum/copilot.lua",
-	-- 	},
-	-- },
-	-- Бесплатный аналог
-	--{
-	--	"Exafunction/codeium.nvim",
-	--	dependencies = {
-	--		"nvim-lua/plenary.nvim",
-	--		"hrsh7th/nvim-cmp",
-	--	},
-	--	config = function()
-	--		require("codeium").setup({})
-	--	end,
-	--},
-
-	-- New plugins
-	{
-		"folke/which-key.nvim",
-		event = "VeryLazy",
-		init = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 300
+		config = function()
+			require("plugins.nullls")
 		end,
-		opts = {},
 	},
+
+	-- Бесплатный аналог
 	{
-		"startup-nvim/startup.nvim",
-		requires = {
-			"nvim-telescope/telescope.nvim",
+		"Exafunction/codeium.nvim",
+		dependencies = {
 			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
 		},
 		config = function()
-			-- require("startup").setup()
+			require("codeium").setup({})
 		end,
 	},
+
+	-- New plugins
+	-- {
+	-- 	"folke/which-key.nvim",
+	-- 	event = "VeryLazy",
+	-- 	init = function()
+	-- 		vim.o.timeout = true
+	-- 		vim.o.timeoutlen = 300
+	-- 	end,
+	-- 	opts = {},
+	-- },
 	-- {
 	-- 	"rcarriga/nvim-notify",
 	-- 	event = "VeryLazy",
@@ -251,11 +250,4 @@ require("lazy").setup({
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
-	-- {
-	-- 	"jeniasaigak/goplay.nvim",
-	-- 	event = "VeryLazy",
-	-- 	config = function()
-	-- 		require("goplay").setup()
-	-- 	end,
-	-- },
 })

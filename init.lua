@@ -18,15 +18,5 @@ require("base.themes")
 
 require("mapping.base")
 
--- LSP
-require("plugins.mason")
-require("plugins.lspconfig")
-require("plugins.luasnip")
-require("mapping.lspconfig")
-require("mapping.luasnip")
-
-require("plugins.telescope")
-require("mapping.telescope")
-
 -- Null ls
-require("plugins.nullls")
+-- require("plugins.nullls")

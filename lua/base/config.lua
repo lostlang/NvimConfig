@@ -14,32 +14,13 @@ vim.opt.listchars:append({ tab = "▎-" })
 vim.opt.listchars:append({ eol = "↵" })
 vim.opt.list = true
 
-LSP_SERVERS = {
-	"gopls",
-	"lua_ls",
-	"pyright",
-	"rust_analyzer",
-	"somesass_ls",
-	--"elixirls", "tsserver", "svelte", "dockerls"
-}
-
 FORMATER = {
-	"gofumpt",
-	"goimports-reviser",
-	"gofumpt",
-	"stylua",
-	"black",
-	"autopep8",
+	-- "golangci_lint_ls",
+	-- "gofumpt",
+	-- "goimports-reviser",
+	-- "gofumpt",
+	-- "stylua",
+	-- "black",
+	-- "autopep8",
 	-- "prettierd", "hadolint",
-}
-
-LANG_SUPPORT = {
-	"go",
-	"lua",
-	"python",
-	"markdown",
-	"rust",
-	"yaml",
-	"toml",
-	--"elixir", "typescript", "javascript", "svelte", "dockerfile"
 }

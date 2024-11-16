@@ -1,18 +1,21 @@
 require("lualine").setup({
 	options = {
-		icons_enabled = true,
+		theme = "lostsand",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		-- always_divide_middle = true,
-		globalstatus = false,
+		disabled_filetypes = {
+			"DiffviewFiles",
+			"DiffviewFileHistory",
+			"neo-tree",
+		},
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = { "branch", "filename" },
+		lualine_b = { "searchcount" },
 		lualine_c = { "diff", "diagnostics" },
-		lualine_x = { "encoding", "filetype" },
-		lualine_y = { "location" },
-		lualine_z = { 'os.date("!%H:%M", os.time() + (60 * 60 * 5))' },
+		lualine_x = { "filetype" },
+		lualine_y = { "encoding" },
+		lualine_z = { "location" },
 	},
 	inactive_sections = {
 		lualine_a = {},

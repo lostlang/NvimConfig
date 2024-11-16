@@ -1,0 +1,6 @@
+require("plugins.lang.go")
+require("plugins.lang.lua")
+require("plugins.lang.python")
+require("plugins.lang.rust")
+require("plugins.lang.text")
+require("plugins.lang.web")

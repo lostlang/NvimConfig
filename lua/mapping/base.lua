@@ -1,5 +1,5 @@
 -- Работа с вим конфигом
-vim.keymap.set("n", "<F3>", ":source %<CR>", { silent = true })
+vim.keymap.set("n", "<F5>", ":luafile $HOME/.config/nvim/init.lua<CR>", { silent = true })
 
 -- Выделить весь текст
 vim.keymap.set("n", "<C-a>", "ggVG", { silent = true })
@@ -14,5 +14,5 @@ vim.keymap.set("n", "<space><space>", ":nohlsearch<CR>", { silent = true })
 vim.keymap.set("n", "c", "", { silent = true })
 
 -- Работа с табами
-vim.keymap.set({ "i", "v" }, "<S-Tab>", "<C-D>", { silent = true })
+vim.keymap.set("v", "<S-Tab>", "<gv", { silent = true })
 vim.keymap.set("v", "<Tab>", ">gv", { silent = true })

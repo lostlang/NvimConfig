@@ -1,7 +1,6 @@
 require("neo-tree").setup({
-	enable_git_status = true,
-	enable_diagnostics = true,
 	window = {
+		position = "float",
 		mappings = {
 			["o"] = "open",
 		},
@@ -9,8 +8,9 @@ require("neo-tree").setup({
 	default_component_configs = {
 		git_status = {
 			symbols = {
-				unstaged = " ",
-				staged = "",
+				untracked = "",
+				unstaged = "",
+				staged = "󰸞",
 			},
 		},
 	},

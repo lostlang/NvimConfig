@@ -1,6 +1,3 @@
-vim.o.completeopt = "menuone,noselect"
-
-require("luasnip")
 local cmp = require("cmp")
 
 cmp.setup({

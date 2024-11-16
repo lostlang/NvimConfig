@@ -1,3 +1,6 @@
 vim.keymap.set("n", "ff", "<cmd>Telescope find_files<cr>", { silent = true })
 vim.keymap.set("n", "fg", "<cmd>Telescope live_grep<cr>", { silent = true })
 vim.keymap.set("n", "fk", "<cmd>Telescope keymaps<cr>", { silent = true })
+vim.keymap.set("n", "fb", "<cmd>Telescope buffers<cr>", { silent = true })
+vim.keymap.set("n", "fh", "<cmd>Telescope highlights<cr>", { silent = true })
+vim.keymap.set("n", "z=", "<cmd>Telescope spell_suggest<cr>", { silent = true })

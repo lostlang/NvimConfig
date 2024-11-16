@@ -1,5 +1,3 @@
-vim.o.completeopt = "menu,menuone,noselect"
-
 local kind_icons = {
 	Text = "",
 	Method = "",
@@ -30,9 +28,22 @@ local kind_icons = {
 	Codeium = "",
 }
 
-local cmp = require("cmp")
+local menus = {
+	nvim_lsp = "[LSP]",
+	buffer = "[Buffer]",
+	luasnip = "[Snip]",
+	nvim_lua = "[Lua]",
+	treesitter = "[Treesitter]",
+	path = "[Path]",
+	nvim_lsp_signature_help = "[Signature]",
+	copilot = "[AI]",
+	codeium = "[AI]",
+}
 
-cmp.setup({
+require("cmp").setup({
+	experimental = {
+		ghost_text = true,
+	},
 	completion = {
 		autocomplete = false,
 	},
@@ -45,22 +56,13 @@ cmp.setup({
 		{ name = "copilot" },
 		{ name = "codeium" },
 		{ name = "nvim_lsp" },
+		{ name = "path" },
 		{ name = "luasnip" },
 	},
 	formatting = {
 		format = function(entry, vim_item)
 			vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
-			vim_item.menu = ({
-				nvim_lsp = "[LSP]",
-				buffer = "[Buffer]",
-				luasnip = "[Snip]",
-				nvim_lua = "[Lua]",
-				treesitter = "[Treesitter]",
-				path = "[Path]",
-				nvim_lsp_signature_help = "[Signature]",
-				copilot = "[AI]",
-				codeium = "[AI]",
-			})[entry.source.name]
+			vim_item.menu = menus[entry.source.name]
 			return vim_item
 		end,
 	},
