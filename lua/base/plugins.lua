@@ -66,6 +66,17 @@ require("lazy").setup({
 			require("gitsigns").setup()
 		end,
 	},
+	-- {
+	-- 	"andrewferrier/wrapping.nvim",
+	-- 	config = function()
+	-- 		require("wrapping").setup({
+	-- 			softener = {
+	-- 				markdown = true,
+	-- 			},
+	-- 			notify_on_switch = false,
+	-- 		})
+	-- 	end,
+	-- },
 
 	-- Interactive part
 	-- Status line
@@ -242,6 +253,18 @@ require("lazy").setup({
 	-- 	event = "VeryLazy",
 	-- 	config = function() end,
 	-- },
+
+	-- Markdown
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"echasnovski/mini.nvim",
+		}, -- if you use the mini.nvim suite
+		config = function()
+			require("plugins.render-markdown")
+		end,
+	},
 	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
