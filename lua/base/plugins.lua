@@ -2,8 +2,7 @@ require("lazy").setup({
 	-- Theme
 	{
 		"lostlang/lostsand.nvim",
-		lazy = false,
-		-- dir = "~/Project/lostsand.nvim",
+		dir = "~/Project/lostsand.nvim",
 		config = function()
 			vim.cmd([[colorscheme lostsand]])
 		end,
@@ -13,7 +12,6 @@ require("lazy").setup({
 	-- Code highlighting
 	{
 		"nvim-treesitter/nvim-treesitter",
-		event = "VeryLazy",
 		build = ":TSUpdate",
 		config = function()
 			require("plugins.treesitter")
@@ -22,7 +20,6 @@ require("lazy").setup({
 	-- Delimiters highlighting
 	{
 		"hiphish/rainbow-delimiters.nvim",
-		event = "VeryLazy",
 		config = function()
 			require("plugins.rainbow-delimiters")
 		end,
@@ -30,7 +27,6 @@ require("lazy").setup({
 	-- Same targets highlighting
 	{
 		"RRethy/vim-illuminate",
-		event = "VeryLazy",
 	},
 	-- Blank line highlighting
 	{
@@ -44,17 +40,14 @@ require("lazy").setup({
 	-- Todo and etc highlighting
 	{
 		"folke/todo-comments.nvim",
-		event = "VeryLazy",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("plugins.todo")
 		end,
 	},
-
 	-- Color highlighting
 	{
 		"norcalli/nvim-colorizer.lua",
-		event = "VeryLazy",
 		config = function()
 			require("colorizer").setup()
 		end,
@@ -66,23 +59,11 @@ require("lazy").setup({
 			require("gitsigns").setup()
 		end,
 	},
-	-- {
-	-- 	"andrewferrier/wrapping.nvim",
-	-- 	config = function()
-	-- 		require("wrapping").setup({
-	-- 			softener = {
-	-- 				markdown = true,
-	-- 			},
-	-- 			notify_on_switch = false,
-	-- 		})
-	-- 	end,
-	-- },
 
 	-- Interactive part
 	-- Status line
 	{
 		"nvim-lualine/lualine.nvim",
-		event = "VeryLazy",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
@@ -93,7 +74,6 @@ require("lazy").setup({
 	-- File tree
 	{
 		"nvim-neo-tree/neo-tree.nvim",
-		event = "VeryLazy",
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -113,45 +93,9 @@ require("lazy").setup({
 			end
 		end,
 	},
-	-- Info about errors
-	{
-		"folke/trouble.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		opts = {},
-	},
-	-- Git разница
-	{
-		"sindrets/diffview.nvim",
-		event = "VeryLazy",
-		config = function()
-			require("diffview").setup({})
-			require("mapping.diffview")
-		end,
-	},
-
-	-- Easily comment
-	{
-		"numToStr/Comment.nvim",
-		event = "VeryLazy",
-		config = function()
-			require("Comment").setup()
-		end,
-	},
-
-	-- Auto pair
-	{
-		"windwp/nvim-autopairs",
-		event = "VeryLazy",
-		-- config = true,
-	},
-
 	-- Поиск по файлам
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.4",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			-- fzf для telescope
@@ -163,6 +107,14 @@ require("lazy").setup({
 		config = function()
 			require("plugins.telescope")
 			require("mapping.telescope")
+		end,
+	},
+	-- Git разница
+	{
+		"sindrets/diffview.nvim",
+		config = function()
+			require("diffview").setup({})
+			require("mapping.diffview")
 		end,
 	},
 
@@ -237,21 +189,22 @@ require("lazy").setup({
 			require("codeium").setup({})
 		end,
 	},
-
-	-- New plugins
 	-- {
-	-- 	"folke/which-key.nvim",
-	-- 	event = "VeryLazy",
-	-- 	init = function()
-	-- 		vim.o.timeout = true
-	-- 		vim.o.timeoutlen = 300
+	-- 	"huggingface/llm.nvim",
+	-- 	config = function()
+	-- 		require("llm").setup({
+	-- 			model = "qwen2.5-coder:0.5b",
+	-- 			url = "http://localhost:11434",
+	-- 			-- cf https://github.com/ollama/ollama/blob/main/docs/api.md#parameters
+	-- 			request_body = {
+	-- 				-- Modelfile options for the model you use
+	-- 				options = {
+	-- 					temperature = 0.2,
+	-- 					top_p = 0.95,
+	-- 				},
+	-- 			},
+	-- 		})
 	-- 	end,
-	-- 	opts = {},
-	-- },
-	-- {
-	-- 	"rcarriga/nvim-notify",
-	-- 	event = "VeryLazy",
-	-- 	config = function() end,
 	-- },
 
 	-- Markdown

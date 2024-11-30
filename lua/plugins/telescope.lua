@@ -1,7 +1,4 @@
-local present, telescope = pcall(require, "telescope")
-if not present then
-	return
-end
+local telescope = require("telescope")
 
 telescope.setup({
 	vimgrep_arguments = {
@@ -32,4 +29,4 @@ telescope.setup({
 	},
 })
 
-require("telescope").load_extension("fzf")
+telescope.load_extension("fzf")

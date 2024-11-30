@@ -1,8 +1,8 @@
 require("lualine").setup({
 	options = {
 		theme = "lostsand",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		component_separators = { left = "󰇙", right = "󰇙" },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			"DiffviewFiles",
 			"DiffviewFileHistory",
@@ -19,7 +19,19 @@ require("lualine").setup({
 			},
 			"searchcount",
 		},
-		lualine_c = { "diff", "diagnostics" },
+		lualine_c = {
+			"diff",
+			{
+				"diagnostics",
+				sources = { "nvim_diagnostic" },
+				symbols = {
+					error = "󰃤 ",
+					warn = " ",
+					info = " ",
+					hint = "󱠂 ",
+				},
+			},
+		},
 		lualine_x = { "filetype" },
 		lualine_y = { "encoding" },
 		lualine_z = { "location" },

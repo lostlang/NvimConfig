@@ -1,6 +1,6 @@
 vim.opt.mouse = "a"
+vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
-
 vim.opt.colorcolumn = { 80, 100 }
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -9,7 +9,6 @@ vim.opt.smartindent = true
 vim.opt.spelllang = { "en_us", "ru" }
 vim.opt.spell = true
 
--- тестовые символы ·•●
 vim.opt.listchars:append({ space = "•" })
 vim.opt.listchars:append({ tab = "▎-" })
 vim.opt.listchars:append({ eol = "↵" })

@@ -24,7 +24,6 @@ local kind_icons = {
 	Event = "",
 	Operator = "󰆖",
 	TypeParameter = "󰅲",
-	Copilot = "",
 	Codeium = "",
 }
 
@@ -36,7 +35,6 @@ local menus = {
 	treesitter = "[Treesitter]",
 	path = "[Path]",
 	nvim_lsp_signature_help = "[Signature]",
-	copilot = "[AI]",
 	codeium = "[AI]",
 }
 
@@ -53,7 +51,6 @@ require("cmp").setup({
 		end,
 	},
 	sources = {
-		{ name = "copilot" },
 		{ name = "codeium" },
 		{ name = "nvim_lsp" },
 		{ name = "path" },
