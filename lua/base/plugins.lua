@@ -128,12 +128,15 @@ require("lazy").setup({
 
 			-- Useful status updates for LSP
 			{
+				"rcarriga/nvim-notify",
+				opts = {},
+			},
+			{
 				"j-hui/fidget.nvim",
 				opts = {},
 			},
 			{
 				"ray-x/lsp_signature.nvim",
-				event = "VeryLazy",
 				opts = {},
 			},
 		},

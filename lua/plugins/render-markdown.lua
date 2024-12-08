@@ -20,22 +20,30 @@ require("render-markdown").setup({
 	checkbox = {
 		unchecked = {
 			icon = "󰄱 ",
+			scope_highlight = "RenderMarkdownUncheckedText",
 		},
 		checked = {
 			icon = "󰡖 ",
-			scope_highlight = "@markup.strikethrough",
+			scope_highlight = "RenderMarkdownDoneText",
 		},
 		custom = {
-			todo = {
+			drop = {
 				raw = "[-]",
+				rendered = "󰜺 ",
+				highlight = "RenderMarkdownCustomCheckboxDrop",
+				scope_highlight = "RenderMarkdownCustomCheckboxDropText",
+			},
+			active = {
+				raw = "[>]",
 				rendered = "󰈸 ",
-				scope_highlight = "Todo",
+				highlight = "RenderMarkdownCustomCheckboxActive",
+				scope_highlight = "RenderMarkdownCustomCheckboxActiveText",
 			},
 			test = {
 				raw = "[~]",
 				rendered = "󰙨 ",
 				highlight = "RenderMarkdownCustomCheckboxTest",
-				scope_highlight = "RenderMarkdownCustomCheckboxTest",
+				scope_highlight = "RenderMarkdownCustomCheckboxTestText",
 			},
 		},
 	},

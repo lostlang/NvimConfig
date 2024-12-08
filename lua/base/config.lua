@@ -1,5 +1,6 @@
 vim.opt.mouse = "a"
 vim.opt.termguicolors = true
+-- vim.opt.tabstop = 4
 vim.opt.clipboard = "unnamedplus"
 vim.opt.colorcolumn = { 80, 100 }
 vim.opt.number = true
